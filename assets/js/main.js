@@ -1,20 +1,5 @@
 
-$(document).ready(function(){
-    let url = window.location.pathname;
-    fetchData("menu", function(result){
-    showMenu(result);
-    });
 
-    if(url == "/shop.html"){
-        fetchData("brands", function(result){
-        showBrands(result);
-        });
-        $("#sort").change(filterChange);
-        $("#search").keyup(filterChange);
-      
-    }
-});
- 
 function fetchData(file, callback){
     $.ajax({
        url:"assets/data/" + file + ".json",
@@ -29,9 +14,12 @@ function fetchData(file, callback){
     });
 }
 
+window.onload = () =>{
     
     
+    let brands= [] ;
     
+    fetchData("menu", showMenu);
 
     function showMenu(data){
         let html = "";
@@ -48,6 +36,7 @@ function fetchData(file, callback){
 
         
   
+    fetchData("brands",showBrands);
     function showBrands(data){
         let html = "";
         let card = document.getElementById("brands");
@@ -59,17 +48,15 @@ function fetchData(file, callback){
         brands = data;
         card.innerHTML = html;
         $('.brand').change(filterChange);
-        fetchData("discounts", function(result){
-            showDiscountList(result);
-            });
-            
+        fetchData("discounts",showDiscountList);
 
     }
     
     
     
     
-   
+    $("#sort").change(filterChange);
+    $("#search").keyup(filterChange);
 
     
     function showDiscountList(data){
@@ -86,7 +73,7 @@ function fetchData(file, callback){
         fetchData("products", function(response){
             setItemToLS("allProducts", response);
             showProducts(response);
-        });
+            });
         // fetchData("products", showMoreInfo);
     }
 
@@ -144,7 +131,6 @@ function fetchData(file, callback){
 
         
     }
-    
     
 
    
@@ -250,20 +236,20 @@ function fetchData(file, callback){
 		fetchData("products", showProducts);
 	}
 
-if(window.location.pathname == "/cart.html"){
-var navbarBtn = document.querySelector(".navbar-toggler");
+    if(window.location.pathname == "/cart.html"){
+        var navbarBtn = document.querySelector(".navbar-toggler");
 
-navbarBtn.addEventListener("click", function(){
-    let navbar = document.querySelector(".navbar");
-    navbar.style.background = "rgb(102, 81, 50)";
-})
-}
+        navbarBtn.addEventListener("click", function(){
+            let navbar = document.querySelector(".navbar");
+            navbar.style.background = "rgb(102, 81, 50)";
+        })
+    }
 
 
 
 
 	
-    scrollFunction()
+    scrollFunction();
 
         let moveTop = document.getElementById("movetop");
         moveTop.addEventListener("click",topFunction);
@@ -416,4 +402,4 @@ navbarBtn.addEventListener("click", function(){
     }
     numberOfItemsInCart();
 
-
+}

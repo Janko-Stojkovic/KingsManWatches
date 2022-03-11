@@ -401,5 +401,16 @@ window.onload = () =>{
         cartNumberSpan.html(cartNumberText);
     }
     numberOfItemsInCart();
-
+    const open_author = document.getElementById('open-author');
+    const modal_author = document.getElementById('modal-author');
+    const close_author = document.getElementById('close');
+    const overlay = document.getElementById('overlay');
+    open_author.addEventListener('click',() => {
+        modal_author.classList.add('active')
+        overlay.classList.add('active')
+    });
+    close_author.addEventListener('click',() =>{
+        modal_author.classList.remove('active')
+        overlay.classList.remove('active')
+    })
 }

@@ -1,0 +1,17 @@
+<rss version="2.0">
+    <channel>
+        <title>Kingsman Watches</title>
+        <link>https://janko-stojkovic.github.io/KingsManWatches/</link>
+        <description>Kingsman Watches long-standing legacy</description>
+        <item>
+            <title>About us</title>
+            <link>https://janko-stojkovic.github.io/KingsManWatches/about.html</link>
+            <description>Inform about us before you buy something</description>
+        </item>
+        <item>
+            <title>Our Shop</title>
+            <link>https://janko-stojkovic.github.io/KingsManWatches/shop.html</link>
+            <description>Look at our products</description>
+        </item>
+    </channel>
+</rss>

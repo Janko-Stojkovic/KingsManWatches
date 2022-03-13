@@ -1,0 +1,27 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://janko-stojkovic.github.io/KingsManWatches/index.html</loc>
+        <lastmod>2022-11-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>https://janko-stojkovic.github.io/KingsManWatches/about.html</loc>
+        <lastmod>2022-11-03</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.4</priority>
+    </url>
+    
+    <url>
+        <loc>https://janko-stojkovic.github.io/KingsManWatches/shop.html</loc>
+        <lastmod>2022-11-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>https://janko-stojkovic.github.io/KingsManWatches/contact.html</loc>
+        <lastmod>2022-11-03</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.4</priority>
+    </url>
+</urlset>
